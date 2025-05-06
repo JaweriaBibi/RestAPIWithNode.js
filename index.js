@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const connectDB = require("./db/connect");
-const serverless = require("serverless-http");
 app.use(express.json()); // For parsing JSON
 
 
@@ -27,5 +26,3 @@ const start = async () => {
   }
 };
 start();
-
-module.exports.handler = serverless(app);
